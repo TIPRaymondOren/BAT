@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "795141351715",
+    "project_id": "bat-db-af6a8",
+    "storage_bucket": "bat-db-af6a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795141351715:android:6ea25b2aa05e11013b8496",
+        "android_client_info": {
+          "package_name": "com.example.bat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwowJKnHqrpXlHIQl8mTiE3TAgyP0-F1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

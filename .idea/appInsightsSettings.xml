@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.bat" />
+                  <option name="mobileSdkAppId" value="1:795141351715:android:6ea25b2aa05e11013b8496" />
+                  <option name="projectId" value="bat-db-af6a8" />
+                  <option name="projectNumber" value="795141351715" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

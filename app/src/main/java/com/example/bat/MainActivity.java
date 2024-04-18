@@ -23,6 +23,9 @@ import java.util.ArrayList;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 // TODO: End of code for geolocation testing
 
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
     private final static int ALL_PERMISSIONS_RESULT = 101;
     GeoLocation locationTrack;
     // TODO: End of code for geolocation testing
+
+    // TODO: Remove this after firebase testing
+    private DatabaseReference reference;
+//    TODO: End of firebase testing
     Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +87,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+//        TODO: Remove this when implementing the firebase, this is to be used as reference only
+
+        Button firebaseBtn = findViewById(R.id.frbsBtn);
+        reference = FirebaseDatabase.getInstance().getReference("message");
+    firebaseBtn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            reference.setValue("Successful Entry");
+        };
+    });
+//        TODO: End of firebase reference code
     }
     // TODO: Remove this code after geolocation testing
     private ArrayList<String> findUnAskedPermissions(ArrayList<String> wanted) {
