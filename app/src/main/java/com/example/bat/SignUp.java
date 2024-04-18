@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class signup extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
     private EditText signupName, signupUsername, signupEmail, signupPassword;
     private TextView loginRedirectText;
@@ -22,7 +22,7 @@ public class signup extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.signup);
+        setContentView(R.layout.activity_sign_up);
 
         signupName = findViewById(R.id.signup_name);
         signupEmail = findViewById(R.id.signup_email);
@@ -44,7 +44,7 @@ public class signup extends AppCompatActivity {
         loginRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(signup.this, login.class);
+                Intent intent = new Intent(SignUp.this, Login.class);
                 startActivity(intent);
             }
         });
@@ -58,7 +58,7 @@ public class signup extends AppCompatActivity {
 
         // Validate input fields
         if (name.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty()) {
-            Toast.makeText(signup.this, "Please fill in all the fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignUp.this, "Please fill in all the fields", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -68,12 +68,12 @@ public class signup extends AppCompatActivity {
         // Store user data in the database
         reference.child(username).setValue(helperClass).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                Toast.makeText(signup.this, "You have signed up successfully!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignUp.this, "You have signed up successfully!", Toast.LENGTH_SHORT).show();
                 // Redirect to login activity
-                Intent intent = new Intent(signup.this, login.class);
+                Intent intent = new Intent(SignUp.this, Login.class);
                 startActivity(intent);
             } else {
-                Toast.makeText(signup.this, "Signup failed. Please try again.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignUp.this, "Signup failed. Please try again.", Toast.LENGTH_SHORT).show();
             }
         });
     }
