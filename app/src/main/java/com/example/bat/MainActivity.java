@@ -98,7 +98,19 @@ public class MainActivity extends AppCompatActivity {
             reference.setValue("Successful Entry");
         };
     });
-//        TODO: End of firebase reference code
+    // TODO: End of firebase reference code
+
+        // TODO: Code for testing Loading Page (remove after testing and implementation)
+
+        Button loadingPageBtn = findViewById(R.id.loadBtn);
+        loadingPageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent loadIntent = new Intent(MainActivity.this, LoadingScreen.class);
+                startActivity(loadIntent);
+            }
+        });
+        // TODO: End of Code for testing Loading Page (remove after testing and implementation)
     }
     // TODO: Remove this code after geolocation testing
     private ArrayList<String> findUnAskedPermissions(ArrayList<String> wanted) {
