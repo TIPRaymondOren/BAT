@@ -111,6 +111,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         // TODO: End of Code for testing Loading Page (remove after testing and implementation)
+
+        // TODO: Code for testing EndScreen
+
+        Button endScrnBtn = findViewById(R.id.endScrnBtn);
+        endScrnBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent endIntent = new Intent(MainActivity.this, EndScreen.class);
+                startActivity(endIntent);
+            }
+        });
+
+        // TODO: End of Code for testing EndScreen
     }
     // TODO: Remove this code after geolocation testing
     private ArrayList<String> findUnAskedPermissions(ArrayList<String> wanted) {
