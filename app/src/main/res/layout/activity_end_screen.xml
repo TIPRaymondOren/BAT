@@ -171,7 +171,8 @@
                         android:gravity="center_horizontal"
                         android:text="@string/rating_5"
                         android:textAlignment="center"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
             </LinearLayout>
