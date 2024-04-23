@@ -6,4 +6,17 @@
     <string name="rating_3">Current Rating: 3/5</string>
     <string name="rating_4">Current Rating: 4/5</string>
     <string name="rating_5">Current Rating: 5/5</string>
+    <string-array name="vehicle_types">
+        <item>Select Vehicle Type</item>
+        <item>Car</item>
+        <item>Motorcycle</item>
+        <item>Truck</item>
+        <item>SUV</item>
+        <item>Sedan</item>
+        <item>Coupe</item>
+        <item>Hatchback</item>
+        <item>Convertible</item>
+        <item>Electric Vehicle (EV)</item>
+        <item>Hybrid Vehicle</item>
+    </string-array>
 </resources>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1B1B1B">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="91dp"
+        android:layout_height="84dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Report Accident"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:textColor="#FFFFFF" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:layout_marginBottom="8dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/editTextContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contact Number (Phone Number)"
+                android:layout_marginBottom="8dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/editTextPlateNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Plate Number"
+                android:layout_marginBottom="8dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF" />
+
+            <Spinner
+                android:id="@+id/spinnerVehicleType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="#FFFFFF"
+                android:textColor="#FFFFFF"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Information"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF" />
+
+                <EditText
+                    android:id="@+id/editTextBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Brand"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
+
+                <EditText
+                    android:id="@+id/editTextModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Model"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
+
+                <EditText
+                    android:id="@+id/editTextColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Color"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
+
+                <EditText
+                    android:id="@+id/editTextLandmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Landmark"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type of Accident (select all that apply)"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxFlatTire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flat Tire"
+                    android:textColor="#FFFFFF" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxGas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gas"
+                    android:textColor="#FFFFFF" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxBattery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Battery"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextAdditionalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Additional Information (other necessary information)"
+                android:layout_marginBottom="16dp"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "684502514190",
+    "firebase_url": "https://report-screen-9686b-default-rtdb.firebaseio.com",
+    "project_id": "report-screen-9686b",
+    "storage_bucket": "report-screen-9686b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684502514190:android:8c100481ddee57b6145a5f",
+        "android_client_info": {
+          "package_name": "com.example.bat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg0tO7QfB4IN9N0L7ia6uymTeoT51kbsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
