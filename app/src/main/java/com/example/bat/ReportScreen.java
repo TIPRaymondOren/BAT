@@ -1,6 +1,9 @@
 package com.example.bat;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -9,7 +12,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -84,17 +90,37 @@ public class ReportScreen extends AppCompatActivity {
                     String color = editTextColor.getText().toString();
                     String landmark = editTextLandmark.getText().toString();
 
+
+                    //check condition for permission
+                    if (ContextCompat.checkSelfPermission(ReportScreen.this, android.Manifest.permission.SEND_SMS)
+                            == PackageManager.PERMISSION_GRANTED){
+                        // when permission is granted
+                        sendSMS();
+                        //create a method
+                        // Send the data to Firebase Realtime Database
+                        myRef.push().setValue(new Report(name, contact, plateNumber, vehicleType, flatTire, gas, battery, additionalInfo, brand, model, color, landmark));
+                        Toast.makeText(ReportScreen.this, "Report submitted successfully", Toast.LENGTH_SHORT).show();
+
+                    }else {
+                        //when permission is not granted
+                        //request for permission
+                        ActivityCompat.requestPermissions(ReportScreen.this, new String[]{android.Manifest.permission.SEND_SMS},
+                                100) ;
+                    }
+
                     // Validate the input
                     if (name.isEmpty() || contact.isEmpty() || plateNumber.isEmpty() || vehicleType.equals("Select Vehicle Type") || brand.isEmpty() || model.isEmpty() || color.isEmpty() || landmark.isEmpty()) {
                         Toast.makeText(ReportScreen.this, "Please fill out all fields", Toast.LENGTH_SHORT).show();
                         return;
                     }
-
+/*
                     // Validate the contact number
                     if (!contact.startsWith("09") || contact.length() != 11) {
                         Toast.makeText(ReportScreen.this, "Invalid Phone Number, Please input a correct one", Toast.LENGTH_SHORT).show();
                         return;
                     }
+*/
+
 
                     // Validate the plate number
                     if (!plateNumber.matches("[A-Za-z]{3}-[0-9]{4}")) {
@@ -105,15 +131,44 @@ public class ReportScreen extends AppCompatActivity {
                     // Process the input
                     // ...
 
-                    // Send the data to Firebase Realtime Database
-                    myRef.push().setValue(new Report(name, contact, plateNumber, vehicleType, flatTire, gas, battery, additionalInfo, brand, model, color, landmark));
 
-                    Toast.makeText(ReportScreen.this, "Report submitted successfully", Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                     Toast.makeText(ReportScreen.this, "An error occurred: " + e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        //check condition
+
+        if (requestCode == 100 && grantResults.length > 0 && grantResults[0]
+                == PackageManager.PERMISSION_GRANTED){
+            //permission is granted , call method
+            sendSMS();
+        }else{
+            //when permission denied, display toast
+            Toast.makeText(this, "Permission Denied!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void sendSMS(){
+        //get value from editText
+        String contact = editTextContact.getText().toString();
+        String message = "Your report has been sent. The mechanic will contact you on this number: \n"+ "Contact Number:" + contact;
+
+            //initialize SMS manager
+            SmsManager smsManager = SmsManager.getDefault();
+            //send message
+            smsManager.sendTextMessage(contact, null, message, null, null);
+
+            Intent intentions = new Intent(ReportScreen.this, LoadingScreen.class);
+            ReportScreen.this.startActivity(intentions);
+
+
+
     }
 }
 

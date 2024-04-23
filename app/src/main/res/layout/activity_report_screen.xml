@@ -47,6 +47,7 @@
                 android:id="@+id/editTextContact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="phone"
                 android:hint="Contact Number (Phone Number)"
                 android:layout_marginBottom="8dp"
                 android:textColor="#FFFFFF"
