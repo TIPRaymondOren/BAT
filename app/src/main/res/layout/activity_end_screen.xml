@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B0B08"
+    android:background="@drawable/batbg2"
     tools:context=".EndScreen">
 
     <LinearLayout
@@ -24,16 +24,26 @@
             android:layout_margin="30dp"
             android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:layout_weight="2"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/checkicon" />
+
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:fontFamily="@font/quicksand"
                 android:gravity="center|center_vertical"
-                android:text="Payment has been deducted from the account number below..."
+                android:text="Payment Successfully Transferred"
                 android:textAlignment="center"
                 android:textColor="#FAFAFA"
-                android:textSize="24sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,6 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
+                    android:fontFamily="@font/quicksand"
                     android:text="Account Number:"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
@@ -57,6 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
+                    android:fontFamily="@font/quicksand"
                     android:text="XXXX-XXXX-XXXX"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
@@ -66,13 +78,15 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="7"
+                android:fontFamily="@font/quicksand"
                 android:gravity="center"
                 android:text="-₱1,500.00"
                 android:textAlignment="center"
                 android:textColor="#F44040"
-                android:textSize="35sp" />
+                android:textSize="40sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -80,10 +94,11 @@
                 android:layout_height="0dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="5"
-                android:text="Thank you for choosing our service!"
+                android:fontFamily="@font/quicksand"
+                android:text="Your payment has been deducted to your account. Thank you for choosing our service!"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="15dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -111,6 +126,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
+                        android:fontFamily="@font/quicksand"
                         android:text="Kindly rate your mechanic"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF"
@@ -168,6 +184,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
+                        android:fontFamily="@font/quicksand"
                         android:gravity="center_horizontal"
                         android:text="@string/rating_5"
                         android:textAlignment="center"
@@ -190,8 +207,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
+                    android:backgroundTint="#FED600"
+                    android:fontFamily="@font/quicksand"
                     android:gravity="center"
-                    android:text="End and Close" />
+                    android:text="END AND CLOSE"
+                    android:textColor="#1E1E1E"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

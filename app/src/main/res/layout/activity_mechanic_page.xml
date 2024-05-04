@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:background="#00FFFFFF"
         android:fontFamily="@font/quicksand"
         android:text="Mechanic Details"
@@ -35,12 +35,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="30dp"
         android:background="#00FFFFFF"
         android:fontFamily="@font/quicksand"
         android:text="Juan Dela Cruz"
         android:textColor="#FFD600"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <TextView
@@ -62,7 +62,7 @@
         android:fontFamily="@font/quicksand"
         android:text="09214784920"
         android:textColor="#FFD600"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:textStyle="bold"/>
 
     <TextView
@@ -85,18 +85,19 @@
         android:fontFamily="@font/quicksand"
         android:text="Ford Ranger"
         android:textColor="#FFD600"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp"
+        android:background="#00FFFFFF"
         android:fontFamily="@font/quicksand"
-        android:text="ABC 123"
-        android:textColor="#F6F6F6"
-        android:textSize="25dp" />
+        android:text="Car Model"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="normal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -105,9 +106,33 @@
         android:layout_marginTop="5dp"
         android:background="#00FFFFFF"
         android:fontFamily="@font/quicksand"
-        android:text="Confirm Payment"
+        android:text="ABC 123"
         android:textColor="#FFD600"
-        android:textSize="30dp"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/quicksand"
+        android:text="Plate Number"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/quicksand"
+        android:text="Amount to be payed"
+        android:textColor="#FFD600"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <TextView
@@ -125,9 +150,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Release payment"
-        android:backgroundTint="#03C04A"
+        android:layout_marginTop="15dp"
+        android:text="RELEASE PAYMENT"
+        android:backgroundTint="#FED600"
+        android:textColor="#1E1E1E"
         android:textSize="20sp"
         android:fontFamily="@font/quicksand"
         android:textStyle="bold" />

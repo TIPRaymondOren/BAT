@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#1B1B1B">
+    android:background="@drawable/batbg2">
 
     <ImageView
         android:id="@+id/imageViewLogo"
@@ -19,9 +19,11 @@
         android:text="Report Accident"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:gravity="center_horizontal"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/quicksand"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,7 +43,8 @@
                 android:hint="Name"
                 android:layout_marginBottom="8dp"
                 android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF" />
+                android:textColorHint="#FFFFFF"
+                android:fontFamily="@font/quicksand"/>
 
             <EditText
                 android:id="@+id/editTextContact"
@@ -49,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="phone"
                 android:hint="Contact Number (Phone Number)"
+                android:fontFamily="@font/quicksand"
                 android:layout_marginBottom="8dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF" />
@@ -58,6 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Plate Number"
+                android:fontFamily="@font/quicksand"
                 android:layout_marginBottom="8dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF" />
@@ -81,6 +86,7 @@
                     android:layout_height="wrap_content"
                     android:text="Vehicle Information"
                     android:textSize="18sp"
+                    android:fontFamily="@font/quicksand"
                     android:textColor="#FFFFFF" />
 
                 <EditText
@@ -89,6 +95,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Brand"
                     android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/quicksand"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF" />
 
@@ -97,6 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Model"
+                    android:fontFamily="@font/quicksand"
                     android:layout_marginBottom="8dp"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF" />
@@ -106,6 +114,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Color"
+                    android:fontFamily="@font/quicksand"
                     android:layout_marginBottom="8dp"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF" />
@@ -115,6 +124,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Landmark"
+                    android:fontFamily="@font/quicksand"
                     android:layout_marginBottom="8dp"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF" />
@@ -131,6 +141,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Type of Accident (select all that apply)"
+                    android:fontFamily="@font/quicksand"
                     android:textSize="18sp"
                     android:textColor="#FFFFFF" />
 
@@ -139,6 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Flat Tire"
+                    android:fontFamily="@font/quicksand"
                     android:textColor="#FFFFFF" />
 
                 <CheckBox
@@ -146,6 +158,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Gas"
+                    android:fontFamily="@font/quicksand"
                     android:textColor="#FFFFFF" />
 
                 <CheckBox
@@ -153,6 +166,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Battery"
+                    android:fontFamily="@font/quicksand"
                     android:textColor="#FFFFFF" />
 
             </LinearLayout>
@@ -172,7 +186,8 @@
                 android:layout_height="wrap_content"
                 android:text="SUBMIT"
                 android:layout_gravity="center_horizontal"
-                android:textColor="#FFFFFF" />
+                android:textColor="#1E1E1E"
+                android:backgroundTint="#FED600" />
         </LinearLayout>
 
     </ScrollView>

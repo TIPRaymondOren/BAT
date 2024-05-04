@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/batbg2"
     tools:context=".LoadingScreen">
 
     <LinearLayout
@@ -25,13 +25,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="80dp"
                 android:layout_marginEnd="40dp"
-                android:fontFamily="monospace"
+                android:fontFamily="@font/quicksand"
                 android:text="@string/loading_title"
                 android:textAlignment="center"
                 android:textColor="#EACC53"
-                android:textSize="35sp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -44,7 +44,7 @@
             <pl.droidsonroids.gif.GifImageView
                 android:layout_width="match_parent"
                 android:layout_height="234dp"
-                android:src="@drawable/loading_anim" />
+                android:src="@drawable/batloadingicon" />
         </LinearLayout>
 
         <LinearLayout
@@ -56,12 +56,14 @@
 
             <TextView
                 android:id="@+id/backEndProcess"
-                android:layout_width="wrap_content"
+                android:layout_width="285dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="80dp"
-                android:text="Sending your Report"
+                android:fontFamily="@font/quicksand"
+                android:text="We're forwarding your report, Thank you for waiting."
+                android:textAlignment="center"
                 android:textColor="#ECB71B"
-                android:textSize="24sp" />
+                android:textSize="20dp" />
         </LinearLayout>
 
     </LinearLayout>

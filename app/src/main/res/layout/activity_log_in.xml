@@ -62,7 +62,7 @@
                 android:text="LOG IN"
                 android:textColor="#1E1E1E"
                 android:backgroundTint="#FED600"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:cornerRadius="20dp" />
 
