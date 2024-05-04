@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/batbg"
     tools:context=".login">
 
     <androidx.cardview.widget.CardView
@@ -14,64 +15,70 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         app:cardCornerRadius="30dp"
-        app:cardElevation="20dp"/>
+        app:cardElevation="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_horizontal"
-        android:padding="24dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
 
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="298dp"
+                android:layout_height="189dp"
+                android:src="@drawable/baticon" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="36sp"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        />
+            <EditText
+                android:id="@+id/login_username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:drawablePadding="8dp"
+                android:hint="Username"
+                android:fontFamily="@font/quicksand"
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/login_username"
-        android:layout_marginTop="40dp"
-        android:padding="8dp"
-        android:hint="Username"
-        android:drawablePadding="8dp"
-        android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="8dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:fontFamily="@font/quicksand"
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/login_password"
-        android:layout_marginTop="20dp"
-        android:padding="8dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:drawablePadding="8dp"
-        android:textColor="@color/black"/>
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/quicksand"
+                android:text="LOG IN"
+                android:textColor="#1E1E1E"
+                android:backgroundTint="#FED600"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Login"
-        android:id="@+id/login_button"
-        android:textSize="18sp"
-        android:layout_marginTop="30dp"
-        app:cornerRadius = "20dp"/>
+            <TextView
+                android:id="@+id/signupRedirectText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:text="Not a user?   Create account"
+                android:fontFamily="@font/quicksand"
+                android:textSize="16sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/signupRedirectText"
-        android:text="Not a user?   Create account"
-        android:layout_gravity="center"
-        android:padding="8dp"
-        android:layout_marginTop="10dp"
-        android:textSize="18sp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
-

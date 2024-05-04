@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MechanicPage"
-    android:background="#0E0E0E">
+    android:background="@drawable/batbg2">
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,14 +18,13 @@
         android:fontFamily="@font/quicksand"
         android:text="Mechanic Details"
         android:textColor="#FFD600"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="174dp"
+        android:layout_height="189dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         app:srcCompat="@drawable/mechanic_img"
@@ -36,13 +35,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="0dp"
         android:background="#00FFFFFF"
         android:fontFamily="@font/quicksand"
         android:text="Juan Dela Cruz"
         android:textColor="#FFD600"
-        android:textSize="30dp"
+        android:textSize="20sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/quicksand"
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="normal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,8 +61,20 @@
         android:layout_marginTop="5dp"
         android:fontFamily="@font/quicksand"
         android:text="09214784920"
-        android:textColor="#F6F6F6"
-        android:textSize="25dp" />
+        android:textColor="#FFD600"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/quicksand"
+        android:text="Contact Number"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="normal" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/batbg"
 
     tools:context=".signup">
 
@@ -27,71 +28,81 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand"
                 android:text="Sign Up"
-                android:textSize="36sp"
                 android:textAlignment="center"
+                android:textSize="36sp"
                 android:textStyle="bold" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:id="@+id/signup_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_marginTop="40dp"
-                android:padding="8dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/quicksand"
                 android:hint="Name"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:id="@+id/signup_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:padding="8dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/quicksand"
                 android:hint="Email"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
                 android:id="@+id/signup_username"
-                android:layout_marginTop="20dp"
-                android:padding="8dp"
-                android:hint="Username"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
-
-            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/signup_password"
                 android:layout_marginTop="20dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/quicksand"
+                android:hint="Username"
                 android:padding="8dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/signup_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/quicksand"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
             <Button
+                android:id="@+id/signup_button"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Sign Up"
-                android:id="@+id/signup_button"
-                android:textSize="18sp"
                 android:layout_marginTop="30dp"
-                app:cornerRadius = "20dp"/>
+                android:backgroundTint="#FED600"
+                android:fontFamily="@font/quicksand"
+                android:text="SIGN UP"
+                android:textColor="#1E1E1E"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp" />
 
             <TextView
+                android:id="@+id/loginRedirectText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/loginRedirectText"
-                android:text="Already have an account? Sign in"
                 android:layout_gravity="center"
-                android:padding="8dp"
                 android:layout_marginTop="10dp"
-                android:textSize="18sp"/>
+                android:fontFamily="@font/quicksand"
+                android:padding="8dp"
+                android:text="Already have an account? Sign in"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
