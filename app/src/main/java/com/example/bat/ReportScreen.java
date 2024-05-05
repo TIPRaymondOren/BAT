@@ -125,7 +125,6 @@ public class ReportScreen extends AppCompatActivity {
                     // Validate the plate number
                     if (!plateNumber.matches("[A-Za-z]{3}-[0-9]{4}")) {
                         Toast.makeText(ReportScreen.this, "Plate number invalid should have first 3 letters and 4 digits", Toast.LENGTH_SHORT).show();
-                        return;
                     }
 
                     // Process the input

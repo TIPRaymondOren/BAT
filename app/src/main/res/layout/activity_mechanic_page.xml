@@ -106,7 +106,7 @@
         android:layout_marginTop="5dp"
         android:background="#00FFFFFF"
         android:fontFamily="@font/quicksand"
-        android:text="ABC 123"
+        android:text="ABC 1234"
         android:textColor="#FFD600"
         android:textSize="25dp"
         android:textStyle="bold" />
@@ -130,7 +130,7 @@
         android:layout_marginTop="5dp"
         android:background="#00FFFFFF"
         android:fontFamily="@font/quicksand"
-        android:text="Amount to be payed"
+        android:text="Amount to be paid"
         android:textColor="#FFD600"
         android:textSize="20dp"
         android:textStyle="bold" />
