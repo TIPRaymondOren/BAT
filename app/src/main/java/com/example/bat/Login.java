@@ -47,6 +47,14 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+
+        signupRedirectText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this, SignUp.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private boolean validateUsername() {
