@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,6 +20,8 @@ import androidx.core.content.ContextCompat;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import com.example.bat.GeoLocation;
 
 public class ReportScreen extends AppCompatActivity {
 
@@ -39,6 +42,8 @@ public class ReportScreen extends AppCompatActivity {
 
     private FirebaseDatabase database;
     private DatabaseReference myRef;
+
+    private GeoLocation location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +77,13 @@ public class ReportScreen extends AppCompatActivity {
         // Change the myRef variable to point to the root of the database
         myRef = database.getReference();
 
+        // Ask for permission and get the location of the user
+        location = new GeoLocation(ReportScreen.this);
+        Double lat = location.getLatitude();
+        String latInfo = "Latitude is: " + lat.toString();
+        Log.i("Info", latInfo);
+
+
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +101,8 @@ public class ReportScreen extends AppCompatActivity {
                     String model = editTextModel.getText().toString();
                     String color = editTextColor.getText().toString();
                     String landmark = editTextLandmark.getText().toString();
-
+                    Double latitude = location.getLatitude();
+                    Double longitude = location.getLongitude();
 
                     //check condition for permission
                     if (ContextCompat.checkSelfPermission(ReportScreen.this, android.Manifest.permission.SEND_SMS)
@@ -98,7 +111,7 @@ public class ReportScreen extends AppCompatActivity {
                         sendSMS();
                         //create a method
                         // Send the data to Firebase Realtime Database
-                        myRef.push().setValue(new Report(name, contact, plateNumber, vehicleType, flatTire, gas, battery, additionalInfo, brand, model, color, landmark));
+                        myRef.push().setValue(new Report(name, contact, plateNumber, vehicleType, flatTire, gas, battery, additionalInfo, brand, model, color, landmark, latitude, longitude));
                         Toast.makeText(ReportScreen.this, "Report submitted successfully", Toast.LENGTH_SHORT).show();
 
                     }else {
@@ -113,22 +126,23 @@ public class ReportScreen extends AppCompatActivity {
                         Toast.makeText(ReportScreen.this, "Please fill out all fields", Toast.LENGTH_SHORT).show();
                         return;
                     }
-/*
+
                     // Validate the contact number
                     if (!contact.startsWith("09") || contact.length() != 11) {
                         Toast.makeText(ReportScreen.this, "Invalid Phone Number, Please input a correct one", Toast.LENGTH_SHORT).show();
                         return;
                     }
-*/
+
 
 
                     // Validate the plate number
                     if (!plateNumber.matches("[A-Za-z]{3}-[0-9]{4}")) {
                         Toast.makeText(ReportScreen.this, "Plate number invalid should have first 3 letters and 4 digits", Toast.LENGTH_SHORT).show();
+                        return;
                     }
 
-                    // Process the input
-                    // ...
+                    Intent intentions = new Intent(ReportScreen.this, LoadingScreen.class);
+                    ReportScreen.this.startActivity(intentions);
 
 
                 } catch (Exception e) {
@@ -163,9 +177,6 @@ public class ReportScreen extends AppCompatActivity {
             //send message
             smsManager.sendTextMessage(contact, null, message, null, null);
 
-            Intent intentions = new Intent(ReportScreen.this, LoadingScreen.class);
-            ReportScreen.this.startActivity(intentions);
-
 
 
     }
@@ -184,8 +195,10 @@ class Report {
     public String model;
     public String color;
     public String landmark;
+    public Double latitude;
+    public Double longitude;
 
-    public Report(String name, String contact, String plateNumber, String vehicleType, boolean flatTire, boolean battery, boolean gas, String additionalInfo, String brand, String model, String color, String landmark) {
+    public Report(String name, String contact, String plateNumber, String vehicleType, boolean flatTire, boolean battery, boolean gas, String additionalInfo, String brand, String model, String color, String landmark, Double latitude, Double longitude) {
         this.name = name;
         this.contact = contact;
         this.plateNumber = plateNumber;
@@ -198,5 +211,7 @@ class Report {
         this.model = model;
         this.color = color;
         this.landmark = landmark;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 }
